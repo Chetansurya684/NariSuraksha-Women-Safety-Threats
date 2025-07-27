@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NariSuraksha - Send Safety Alert</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #3a6186, #89253e);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      margin: 40px 0 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      color: #000; /* <-- Added black color for the name */
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.4);
+      letter-spacing: 2px;
+    }
+
+    .header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #f1f1f1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .alert-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .alert-form h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .alert-form textarea,
+    .alert-form input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .alert-form textarea:focus,
+    .alert-form input:focus {
+      outline: none;
+      border-color: #89253e;
+    }
+
+    .alert-form button {
+      width: 100%;
+      padding: 12px;
+      background: #ff4081;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .alert-form button:hover {
+      background: #d81b60;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      background: #fff;
+      color: #89253e;
+      border: 2px solid #89253e;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: #89253e;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>NariSuraksha</h1>
+    <p>Your safety is our priority — raise your voice, we are here to help!</p>
+  </div>
+
+  <form class="alert-form" action="SendAlert1" method="post">
+    <h2>Send Safety Alert</h2>
+    <textarea type ="text" name="adesc" rows="4" placeholder="Describe your situation..." required></textarea>
+    <input type="text" name="address" placeholder="Your Location or Address" required />
+    
+    <button type="submit">Send Alert</button>
+  </form>
+
+  <a href="UserDashboard.html" class="back-link">← Go To Login</a>
+
+</body>
+</html>
